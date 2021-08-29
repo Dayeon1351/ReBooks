@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ReBooks</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous"
+    />
+</head>
+<body>
+<div id="outter">
+    <div class="clicklogin">
+        <bold><a href="./welcome.html" style="text-decoration: none; color: black"><</a></bold>로그인
+    </div>
+    <div class="contents">
+        재미있는 책 <br/>
+        한줄 리뷰 남기는<br/>
+        리북스<br/><br/><br/>
+    </div>
+    <div th:if="${loginError}" class="alert alert-danger" role="alert">로그인에 실패하였습니다.</div>
+    <form action="/user/login" method="post">
+        <input class="loginText" name = "username" type="text" placeholder="이메일을 입력해주세요."/>
+        <br/>
+        <input class="passwordText" name = "password" type="password" placeholder="비밀번호를 입력해주세요."/>
+        <br/>
+
+        <button class="loginButton" value="로그인">로그인</button>
+    </form>
+    <div class="createLogin" style="color: #999999">
+        아직 회원이 아닌가요?
+        <bold><a onclick="location.href='/user/signup'" style="text-decoration: none; color: black">회원가입 ></a></bold>
+    </div>
+</div>
+</body>
+</html>

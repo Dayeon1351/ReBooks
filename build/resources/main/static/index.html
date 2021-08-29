@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ReBooks</title>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+            crossorigin="anonymous"
+    />
+    <script>
+        function login() {
+            location.href = "./review.html";
+        }
+
+        function indexcontent() {
+            location.href = "main.html";
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="basic.js"></script>
+</head>
+<body onload="showProduct()">
+<div id="outter">
+    <div id="search">
+        <input class="searchbar" id="query_title" type="text" placeholder="검색어를 입력하세요"/>
+        <input class="searchbutton" onclick="showProduct()" type="button" value="전체리뷰 조회하기"/>
+    </div>
+    <a id="logout-text" href="/user/logout">로그아웃</a>
+    <div id="product-container">
+        <div id="content1" onclick="indexcontent()">
+        </div>
+    </div>
+
+    <button id="plusbutton">
+        <span class="plusbutton1" onclick="login()">+ </span>
+    </button>
+</div>
+</body>
+</html>
