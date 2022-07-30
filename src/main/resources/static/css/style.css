@@ -129,6 +129,10 @@ input::placeholder {
   margin: 40px 24px 0 24px;
 }
 
+.bookimage {
+  width: 100px;
+  height: 150px;
+}
 
 #content1 {
   display: flex;
@@ -142,10 +146,6 @@ input::placeholder {
   padding: 0 10px 0px 10px;
 }
 
-/*.contenttime {*/
-/*  font-size: 14px;*/
-/*  color: #999999;*/
-/*}*/
 
 .contentarticle {
   font-size: 16px;
@@ -302,4 +302,7 @@ input::placeholder {
 
 #image{
   border: 1px solid black;
+  width: 250px;
+  height: 300px;
 }
+
